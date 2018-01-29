@@ -1,0 +1,25 @@
+{
+  "name": "phonenumber-parser",
+  "version": "1.0.0",
+  "description": "A simple RESTful api server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yalooong/phonenumber-parser.git"
+  },
+  "author": "Yalong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yalooong/phonenumber-parser/issues"
+  },
+  "homepage": "https://github.com/yalooong/phonenumber-parser#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.4.0",
+    "libphonenumber-js": "^1.0.7"
+  }
+}

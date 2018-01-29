@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>File upload</title>
+    </head>
+    <body>
+        <form ref='uploadForm'
+              encType="multipart/form-data"
+              id='uploadFrom'
+              method='post'
+              action="http://localhost:3000/api/phonenumbers/parse/file">
+                <input type="file" name="mfile" />
+                <input type="submit" value="Upload" />
+        </form>
+    </body>
+</html>
