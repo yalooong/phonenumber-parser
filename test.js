@@ -27,7 +27,7 @@ describe('parse phone number /parse/text/string', () => {
             .get('/api/phonenumbers/parse/text/asidifs647-890%202134edf')
             .end((err, res) => {
                 res.should.have.status(200);
-                res.body.should.be.a('array');
+                res.body.should.be.an('array').that.include("(647) 890-2134");
                 done();
             });
     });
