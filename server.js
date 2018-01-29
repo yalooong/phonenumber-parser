@@ -60,7 +60,7 @@ router.post('/file', function(req, res) {
 
 // localhost status
 app.get('/', (req, res) => {
-    return res.status(200).send('API works.');
+    return res.status(200).send('API works');
 });
 
 // Register
@@ -70,6 +70,9 @@ app.use('/api/phonenumbers/parse', router);
 // Start server
 app.listen(port);
 console.log('The server is on port ' + port);
+
+// for testing
+module.exports = app;
 
 // util function to check if object is empty
 function isEmpty(obj) {

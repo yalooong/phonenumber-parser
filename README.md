@@ -52,6 +52,11 @@ This allow you to upload a file, and parse the phone numbers within the file.
 http://localhost:3000/api/phonenumbers/parse/file
 ```
 
+To test the APIs.
+
+```
+npm test
+```
 ## Built With
 
 * [Express](https://expressjs.com/) - The web framework used
