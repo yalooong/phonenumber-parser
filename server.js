@@ -36,6 +36,7 @@ router.get('/text/:string', (req, res) => {
 // allow sending of url links to be parsed.
 //note need  to send as www.{...string...}.com to work properly work
 router.get('/http/:string', (req, res) => {
+    var rt = [];
 
     var options = {
       host: req.params.string,
@@ -70,6 +71,7 @@ router.get('/http/:string', (req, res) => {
 // allow sending of url links to be parsed.
 // note need  to send as www.{...string...}.com to work properly work
 router.get('/https/:string', (req, res) => {
+    var rt = [];
 
     var options = {
       host: req.params.string,
@@ -112,7 +114,7 @@ router.post('/file', function(req, res) {
     if (!req.files) {
         return res.status(400).send('No files were uploaded.');
     } else {
-        let mfile = req.files.mfile;
+        var mfile = req.files.mfile;
         var rt = [];
 
         var fs = require('fs');
