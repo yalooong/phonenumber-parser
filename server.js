@@ -36,13 +36,9 @@ router.get('/text/:string', (req, res) => {
 // allow sending of url links to be parsed.
 //note need  to send as www.{...string...}.com to work properly work
 router.get('/http/:string', (req, res) => {
-    var url = require('url');
-    var rt = [];
-    var text = req.params.string;
-    console.log(text);
 
     var options = {
-      host: text,
+      host: req.params.string,
       path: '/',
     }
     //note the ress. had to put that because it conflicts with res in router
@@ -55,7 +51,6 @@ router.get('/http/:string', (req, res) => {
         var textVersion = require("textversionjs");
         var plainText = textVersion(data);
         var phrases = data.split("\n");
-        console.log(phrases);
         for(var i = 0; i < phrases.length; i++){
           var result = libphonenumber.parse(phrases[i], "CA");
           if (!isEmpty(result)) {
@@ -75,13 +70,9 @@ router.get('/http/:string', (req, res) => {
 // allow sending of url links to be parsed.
 // note need  to send as www.{...string...}.com to work properly work
 router.get('/https/:string', (req, res) => {
-    var url = require('url');
-    var rt = [];
-    var text = req.params.string;
-    console.log(text);
 
     var options = {
-      host: text,
+      host: req.params.string,
       path: '/',
     }
     //note the ress. had to put that because it conflicts with res in router
@@ -94,7 +85,6 @@ router.get('/https/:string', (req, res) => {
         var textVersion = require("textversionjs");
         var plainText = textVersion(data);
         var phrases = data.split("\n");
-        console.log(phrases);
         for(var i = 0; i < phrases.length; i++){
           var result = libphonenumber.parse(phrases[i], "CA");
           if (!isEmpty(result)) {
