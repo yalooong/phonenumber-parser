@@ -36,13 +36,20 @@ The server should be started on localhost:3000.
 
 ## Running the tests
 
-Two APIs are accessable at:
+APIs are accessable at:
 
 GET /api/phonenumbers/parse/text/{...string...}
 This will send back an array of numbers if the string contains any.
 
 ```
 http://localhost:3000/api/phonenumbers/parse/text/anytextandnumber4168391029
+```
+
+GET /api/phonenumbers/parse/http/{...website...} and /api/phonenumbers/parse/https/{...website...}
+The url has to be formatted like this: /api/phonenumbers/parse/url/www.example.com
+
+```
+http://localhost:3000/api/phonenumbers/parse/https/www.bestbuy.ca
 ```
 
 POST http://localhost:3000/api/phonenumbers/parse/file
